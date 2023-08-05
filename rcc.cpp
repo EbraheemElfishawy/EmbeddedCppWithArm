@@ -1,9 +1,10 @@
 #include "rcc.h"
 
 RCC_TypeDef* RCC_MemoryMapBase = (RCC_TypeDef*) RCC_BASE;
+
 rcc::rcc()
 {
-	
+
 	rccErr= RCC_OK;
 	
 }

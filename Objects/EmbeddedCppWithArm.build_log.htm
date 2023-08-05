@@ -22,12 +22,41 @@ Dialog DLL:      TCM.DLL V1.53.0.0
  
 <h2>Project:</h2>
 H:\Youtube_EmbeddedCpp\Repositories\EmbeddedCpp\EmbeddedCppWithArm\EmbeddedCppWithArm.uvprojx
-Project File Date:  07/17/2023
+Project File Date:  07/29/2023
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'STMF446RE'
+main.cpp(1): warning: In file included from...
+./gpio.h(112): warning: default member initializer for non-static data members is incompatible with C++98 [-Wc++98-compat]
+                GPIO_PinState_t  pinState                       =GPIO_PIN_STATE_LOW;
+                                                                ^
+./gpio.h(113): warning: default member initializer for non-static data members is incompatible with C++98 [-Wc++98-compat]
+                GPIO_PinMode_t   pinMode                        =GPIO_PinMode_OUTPUT;
+                                                                ^
+./gpio.h(114): warning: default member initializer for non-static data members is incompatible with C++98 [-Wc++98-compat]
+                GPIO_PinOutputSpeed_t pinOutputSpeed=GPIO_PinOutputSpeed_LOW;
+                                                    ^
+./gpio.h(115): warning: default member initializer for non-static data members is incompatible with C++98 [-Wc++98-compat]
+                GPIO_PinOutputType_t  pinOutputType     =GPIO_PinOutputType_PUSH_PULL;
+                                                        ^
+./gpio.h(116): warning: default member initializer for non-static data members is incompatible with C++98 [-Wc++98-compat]
+                GPIO_PinPullUpDown_t  pinPullUpDown     =GPIO_PinPullUpDown_NOPULL;
+                                                        ^
+./gpio.h(139): warning: C++98 requires newline at end of file [-Wc++98-compat-pedantic]
+#endif
+      ^
+main.cpp(15): warning: C++98 requires newline at end of file [-Wc++98-compat-pedantic]
+}
+ ^
+main.cpp(1): warning: In file included from...
+./gpio.h(130): warning: padding class 'gpio' with 3 bytes to align 'GPIO_PortReg' [-Wpadded]
+                GPIO_TypeDef * GPIO_PortReg;
+                               ^
+8 warnings generated.
+compiling main.cpp...
 assembling startup_stm32f446xx.s...
+compiling system_stm32f4xx.c...
 rcc.cpp(1): warning: In file included from...
 ./rcc.h(37): warning: C++98 requires newline at end of file [-Wc++98-compat-pedantic]
 #endif
@@ -41,42 +70,242 @@ RCC_TypeDef* RCC_MemoryMapBase = (RCC_TypeDef*) RCC_BASE;
 rcc.cpp(3): note: declare 'static' if the variable is not intended to be used outside of this translation unit
 RCC_TypeDef* RCC_MemoryMapBase = (RCC_TypeDef*) RCC_BASE;
 ^
-rcc.cpp(40): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+rcc.cpp(41): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
                 default:
                 ^
-rcc.cpp(48): warning: C++98 requires newline at end of file [-Wc++98-compat-pedantic]
+rcc.cpp(49): warning: C++98 requires newline at end of file [-Wc++98-compat-pedantic]
 }
  ^
 5 warnings generated.
 compiling rcc.cpp...
-compiling system_stm32f4xx.c...
-main.cpp(1): warning: In file included from...
+gpio.cpp(1): warning: In file included from...
+./gpio.h(112): warning: default member initializer for non-static data members is incompatible with C++98 [-Wc++98-compat]
+                GPIO_PinState_t  pinState                       =GPIO_PIN_STATE_LOW;
+                                                                ^
+./gpio.h(113): warning: default member initializer for non-static data members is incompatible with C++98 [-Wc++98-compat]
+                GPIO_PinMode_t   pinMode                        =GPIO_PinMode_OUTPUT;
+                                                                ^
+./gpio.h(114): warning: default member initializer for non-static data members is incompatible with C++98 [-Wc++98-compat]
+                GPIO_PinOutputSpeed_t pinOutputSpeed=GPIO_PinOutputSpeed_LOW;
+                                                    ^
+./gpio.h(115): warning: default member initializer for non-static data members is incompatible with C++98 [-Wc++98-compat]
+                GPIO_PinOutputType_t  pinOutputType     =GPIO_PinOutputType_PUSH_PULL;
+                                                        ^
+./gpio.h(116): warning: default member initializer for non-static data members is incompatible with C++98 [-Wc++98-compat]
+                GPIO_PinPullUpDown_t  pinPullUpDown     =GPIO_PinPullUpDown_NOPULL;
+                                                        ^
+./gpio.h(139): warning: C++98 requires newline at end of file [-Wc++98-compat-pedantic]
+#endif
+      ^
+gpio.cpp(2): warning: In file included from...
 ./rcc.h(37): warning: C++98 requires newline at end of file [-Wc++98-compat-pedantic]
 #endif
       ^
-main.cpp(2): warning: no previous extern declaration for non-static variable 'RCC_object' [-Wmissing-variable-declarations]
-rcc RCC_object;
+gpio.cpp(5): warning: use of old-style cast [-Wold-style-cast]
+GPIO_TypeDef* GPIO_RegArr[GPIO_PORT_MAX] = {GPIOA,GPIOB,GPIOC,GPIOD,GPIOE,GPIOH};
+                                            ^~~~~
+C:/Users/ebrah/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f446xx.h(1122): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                             ^                ~~~~~~~~~~
+gpio.cpp(5): warning: use of old-style cast [-Wold-style-cast]
+GPIO_TypeDef* GPIO_RegArr[GPIO_PORT_MAX] = {GPIOA,GPIOB,GPIOC,GPIOD,GPIOE,GPIOH};
+                                                  ^~~~~
+C:/Users/ebrah/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f446xx.h(1123): note: expanded from macro 'GPIOB'
+#define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+                             ^                ~~~~~~~~~~
+gpio.cpp(5): warning: use of old-style cast [-Wold-style-cast]
+GPIO_TypeDef* GPIO_RegArr[GPIO_PORT_MAX] = {GPIOA,GPIOB,GPIOC,GPIOD,GPIOE,GPIOH};
+                                                        ^~~~~
+C:/Users/ebrah/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f446xx.h(1124): note: expanded from macro 'GPIOC'
+#define GPIOC               ((GPIO_TypeDef *) GPIOC_BASE)
+                             ^                ~~~~~~~~~~
+gpio.cpp(5): warning: use of old-style cast [-Wold-style-cast]
+GPIO_TypeDef* GPIO_RegArr[GPIO_PORT_MAX] = {GPIOA,GPIOB,GPIOC,GPIOD,GPIOE,GPIOH};
+                                                              ^~~~~
+C:/Users/ebrah/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f446xx.h(1125): note: expanded from macro 'GPIOD'
+#define GPIOD               ((GPIO_TypeDef *) GPIOD_BASE)
+                             ^                ~~~~~~~~~~
+gpio.cpp(5): warning: use of old-style cast [-Wold-style-cast]
+GPIO_TypeDef* GPIO_RegArr[GPIO_PORT_MAX] = {GPIOA,GPIOB,GPIOC,GPIOD,GPIOE,GPIOH};
+                                                                    ^~~~~
+C:/Users/ebrah/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f446xx.h(1126): note: expanded from macro 'GPIOE'
+#define GPIOE               ((GPIO_TypeDef *) GPIOE_BASE)
+                             ^                ~~~~~~~~~~
+gpio.cpp(5): warning: use of old-style cast [-Wold-style-cast]
+GPIO_TypeDef* GPIO_RegArr[GPIO_PORT_MAX] = {GPIOA,GPIOB,GPIOC,GPIOD,GPIOE,GPIOH};
+                                                                          ^~~~~
+C:/Users/ebrah/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f446xx.h(1129): note: expanded from macro 'GPIOH'
+#define GPIOH               ((GPIO_TypeDef *) GPIOH_BASE)
+                             ^                ~~~~~~~~~~
+gpio.cpp(5): warning: no previous extern declaration for non-static variable 'GPIO_RegArr' [-Wmissing-variable-declarations]
+GPIO_TypeDef* GPIO_RegArr[GPIO_PORT_MAX] = {GPIOA,GPIOB,GPIOC,GPIOD,GPIOE,GPIOH};
+              ^
+gpio.cpp(5): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+GPIO_TypeDef* GPIO_RegArr[GPIO_PORT_MAX] = {GPIOA,GPIOB,GPIOC,GPIOD,GPIOE,GPIOH};
+^
+gpio.cpp(6): warning: no previous extern declaration for non-static variable 'GPIO_rcc_object' [-Wmissing-variable-declarations]
+rcc GPIO_rcc_object;
     ^
-main.cpp(2): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-rcc RCC_object;
+gpio.cpp(6): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+rcc GPIO_rcc_object;
 ^
-main.cpp(2): warning: declaration requires a global constructor [-Wglobal-constructors]
-rcc RCC_object;
-    ^~~~~~~~~~
-main.cpp(4): warning: no previous extern declaration for non-static variable 'usedPort' [-Wmissing-variable-declarations]
-RCC_GpioPortName_t usedPort = RCC_GPIO_PORT_A;
-                   ^
-main.cpp(4): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-RCC_GpioPortName_t usedPort = RCC_GPIO_PORT_A;
-^
-main.cpp(9): warning: C++98 requires newline at end of file [-Wc++98-compat-pedantic]
+gpio.cpp(6): warning: declaration requires a global constructor [-Wglobal-constructors]
+rcc GPIO_rcc_object;
+    ^~~~~~~~~~~~~~~
+gpio.cpp(45): warning: use of old-style cast [-Wold-style-cast]
+                                GPIO_rcc_object.RCC_gpioPortInit((RCC_GpioPortName_t) PortName);
+                                                                 ^                    ~~~~~~~~
+gpio.cpp(51): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                        default:
+                        ^
+gpio.cpp(1): warning: In file included from...
+./gpio.h(130): warning: padding class 'gpio' with 3 bytes to align 'GPIO_PortReg' [-Wpadded]
+                GPIO_TypeDef * GPIO_PortReg;
+                               ^
+gpio.cpp(69): warning: use of old-style cast [-Wold-style-cast]
+        if((pinConfigs != (GPIO_PinConfigs*)NULL) && (gpioErr == GPIO_OK) && (pinConfigs->GPIO_PinConfigsIsOk() == GPIO_OK))    
+                          ^                 ~~~~
+gpio.cpp(69): warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+        if((pinConfigs != (GPIO_PinConfigs*)NULL) && (gpioErr == GPIO_OK) && (pinConfigs->GPIO_PinConfigsIsOk() == GPIO_OK))    
+                                            ^~~~
+                                            nullptr
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(61): note: expanded from macro 'NULL'
+#define NULL 0                   /* see <stddef.h> */
+             ^
+gpio.cpp(72): warning: binary integer literals are a C++14 extension [-Wc++14-binary-literal]
+                GPIO_PortReg->MODER &=~ (uint32_t) ( (MODER_MASK                  << ((pinConfigs->pinNumber)*MODER_PIN_ACCESS)) );
+                                                      ^
+./gpio.h(8): note: expanded from macro 'MODER_MASK'
+#define MODER_MASK              0b11
+                                ^
+gpio.cpp(72): warning: use of old-style cast [-Wold-style-cast]
+                GPIO_PortReg->MODER &=~ (uint32_t) ( (MODER_MASK                  << ((pinConfigs->pinNumber)*MODER_PIN_ACCESS)) );
+                                        ^          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gpio.cpp(73): warning: use of old-style cast [-Wold-style-cast]
+                GPIO_PortReg->MODER |=  (uint32_t) ( (pinConfigs->pinMode << ((pinConfigs->pinNumber)*MODER_PIN_ACCESS)) );
+                                        ^          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gpio.cpp(76): warning: binary integer literals are a C++14 extension [-Wc++14-binary-literal]
+                GPIO_PortReg->PUPDR &=~ (uint32_t) ( (PUPDR_MASK                                << ((pinConfigs->pinNumber)*PUPDR_PIN_ACCESS)) );
+                                                      ^
+./gpio.h(11): note: expanded from macro 'PUPDR_MASK'
+#define PUPDR_MASK              0b11
+                                ^
+gpio.cpp(76): warning: use of old-style cast [-Wold-style-cast]
+                GPIO_PortReg->PUPDR &=~ (uint32_t) ( (PUPDR_MASK                                << ((pinConfigs->pinNumber)*PUPDR_PIN_ACCESS)) );
+                                        ^          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gpio.cpp(77): warning: use of old-style cast [-Wold-style-cast]
+                GPIO_PortReg->PUPDR |=  (uint32_t) ( (pinConfigs->pinPullUpDown << ((pinConfigs->pinNumber)*PUPDR_PIN_ACCESS)) );
+                                        ^          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gpio.cpp(83): warning: binary integer literals are a C++14 extension [-Wc++14-binary-literal]
+                        GPIO_PortReg->OTYPER  &= ~(OTYPER_MASK                     << (pinConfigs->pinNumber)*OTYPER_PIN_ACCESS ); //clear MODER pins
+                                                   ^
+./gpio.h(14): note: expanded from macro 'OTYPER_MASK'
+#define OTYPER_MASK             0b1
+                                ^
+gpio.cpp(84): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        GPIO_PortReg->OTYPER  |= ((pinConfigs->pinPullUpDown) << (pinConfigs->pinNumber)*OTYPER_PIN_ACCESS);
+                                              ~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gpio.cpp(87): warning: binary integer literals are a C++14 extension [-Wc++14-binary-literal]
+                        GPIO_PortReg->OSPEEDR &= ~(OSPEEDR_MASK           << pinConfigs->pinNumber ); //clear MODER pins
+                                                   ^
+./gpio.h(18): note: expanded from macro 'OSPEEDR_MASK'
+#define OSPEEDR_MASK            0b11
+                                ^
+gpio.cpp(87): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        GPIO_PortReg->OSPEEDR &= ~(OSPEEDR_MASK           << pinConfigs->pinNumber ); //clear MODER pins
+                                              ~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gpio.cpp(88): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        GPIO_PortReg->OSPEEDR |= ((pinConfigs->pinOutputSpeed) << (pinConfigs->pinNumber)*OSPEEDR_PIN_ACCESS);
+                                              ~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gpio.cpp(91): warning: use of old-style cast [-Wold-style-cast]
+                                GPIO_PortReg->ODR &= (uint32_t)(~(u8GPIO_ONE<<pinConfigs->pinNumber));
+                                                     ^         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gpio.cpp(95): warning: use of old-style cast [-Wold-style-cast]
+                                GPIO_PortReg->ODR |= (uint32_t)(u8GPIO_ONE<<pinConfigs->pinNumber);
+                                                     ^         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gpio.cpp(108): warning: binary integer literals are a C++14 extension [-Wc++14-binary-literal]
+                        GPIO_PortReg->OTYPER  &= ~(OTYPER_MASK                     << (pinConfigs->pinNumber)*OTYPER_PIN_ACCESS ); //clear MODER pins
+                                                   ^
+./gpio.h(14): note: expanded from macro 'OTYPER_MASK'
+#define OTYPER_MASK             0b1
+                                ^
+gpio.cpp(109): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        GPIO_PortReg->OTYPER  |= ((pinConfigs->pinPullUpDown) << (pinConfigs->pinNumber)*OTYPER_PIN_ACCESS);
+                                              ~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gpio.cpp(112): warning: binary integer literals are a C++14 extension [-Wc++14-binary-literal]
+                        GPIO_PortReg->OSPEEDR &= ~(OSPEEDR_MASK           << pinConfigs->pinNumber ); //clear MODER pins
+                                                   ^
+./gpio.h(18): note: expanded from macro 'OSPEEDR_MASK'
+#define OSPEEDR_MASK            0b11
+                                ^
+gpio.cpp(112): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        GPIO_PortReg->OSPEEDR &= ~(OSPEEDR_MASK           << pinConfigs->pinNumber ); //clear MODER pins
+                                              ~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gpio.cpp(113): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        GPIO_PortReg->OSPEEDR |= ((pinConfigs->pinOutputSpeed) << (pinConfigs->pinNumber)*OSPEEDR_PIN_ACCESS);
+                                              ~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gpio.cpp(117): warning: binary integer literals are a C++14 extension [-Wc++14-binary-literal]
+                        GPIO_PortReg->AFR[Local_u8RegNum] &= ~(AFR_MASK << Local_u8pinNumber *AFR_PIN_ACCESS); //clear MODER pins
+                                                               ^
+./gpio.h(21): note: expanded from macro 'AFR_MASK'
+#define AFR_MASK                0b1111
+                                ^
+gpio.cpp(117): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        GPIO_PortReg->AFR[Local_u8RegNum] &= ~(AFR_MASK << Local_u8pinNumber *AFR_PIN_ACCESS); //clear MODER pins
+                                                          ~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gpio.cpp(118): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        GPIO_PortReg->AFR[Local_u8RegNum] |= ((pinConfigs->pinAltFunc) << (Local_u8pinNumber * AFR_PIN_ACCESS));
+                                                          ~~  ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gpio.cpp(144): warning: use of old-style cast [-Wold-style-cast]
+        if((pinConfigs != (GPIO_PinConfigs*)NULL) && (pinConfigs->pinInitErr == GPIO_OK))
+                          ^                 ~~~~
+gpio.cpp(144): warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+        if((pinConfigs != (GPIO_PinConfigs*)NULL) && (pinConfigs->pinInitErr == GPIO_OK))
+                                            ^~~~
+                                            nullptr
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(61): note: expanded from macro 'NULL'
+#define NULL 0                   /* see <stddef.h> */
+             ^
+gpio.cpp(146): warning: use of old-style cast [-Wold-style-cast]
+                pinState = (GPIO_PinState_t) ((GPIO_PortReg->IDR >> pinConfigs->pinNumber) & u8GPIO_ONE);
+                           ^                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gpio.cpp(159): warning: use of old-style cast [-Wold-style-cast]
+        if((pinConfigs != (GPIO_PinConfigs*)NULL) && (pinConfigs->pinInitErr == GPIO_OK))       
+                          ^                 ~~~~
+gpio.cpp(159): warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+        if((pinConfigs != (GPIO_PinConfigs*)NULL) && (pinConfigs->pinInitErr == GPIO_OK))       
+                                            ^~~~
+                                            nullptr
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(61): note: expanded from macro 'NULL'
+#define NULL 0                   /* see <stddef.h> */
+             ^
+gpio.cpp(163): warning: use of old-style cast [-Wold-style-cast]
+                        GPIO_PortReg->ODR &= (uint32_t)(~(u8GPIO_ONE<<pinConfigs->pinNumber));
+                                             ^         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gpio.cpp(167): warning: use of old-style cast [-Wold-style-cast]
+                        GPIO_PortReg->ODR |= (uint32_t)(u8GPIO_ONE<<pinConfigs->pinNumber);
+                                             ^         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gpio.cpp(180): warning: use of old-style cast [-Wold-style-cast]
+        if((pinConfigs != (GPIO_PinConfigs*)NULL) && (pinConfigs->pinInitErr == GPIO_OK))       
+                          ^                 ~~~~
+gpio.cpp(180): warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+        if((pinConfigs != (GPIO_PinConfigs*)NULL) && (pinConfigs->pinInitErr == GPIO_OK))       
+                                            ^~~~
+                                            nullptr
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(61): note: expanded from macro 'NULL'
+#define NULL 0                   /* see <stddef.h> */
+             ^
+gpio.cpp(182): warning: use of old-style cast [-Wold-style-cast]
+                GPIO_PortReg->ODR ^= (uint32_t)(u8GPIO_ONE<<pinConfigs->pinNumber);
+                                     ^         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gpio.cpp(190): warning: C++98 requires newline at end of file [-Wc++98-compat-pedantic]
 }
  ^
-5 warnings generated.
-compiling main.cpp...
+53 warnings generated.
+compiling gpio.cpp...
 linking...
-Program Size: Code=552 RO-data=488 RW-data=4 ZI-data=1640  
-".\Objects\EmbeddedCppWithArm.axf" - 0 Error(s), 10 Warning(s).
+Program Size: Code=1024 RO-data=488 RW-data=28 ZI-data=1640  
+".\Objects\EmbeddedCppWithArm.axf" - 0 Error(s), 66 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -102,8 +331,8 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.6.0
 
    * Component: Keil::Device:Startup:2.6.3
-      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
       Source file:   MDK\Device\Source\ARM\STM32F446xx_OPT.s
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
       Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
       Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f446xx.s
       Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c

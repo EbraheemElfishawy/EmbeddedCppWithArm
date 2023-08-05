@@ -393,6 +393,16 @@
               <FileType>5</FileType>
               <FilePath>.\rcc.h</FilePath>
             </File>
+            <File>
+              <FileName>gpio.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\gpio.h</FilePath>
+            </File>
+            <File>
+              <FileName>gpio.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\gpio.cpp</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
