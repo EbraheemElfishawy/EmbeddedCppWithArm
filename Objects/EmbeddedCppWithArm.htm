@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\EmbeddedCppWithArm.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\EmbeddedCppWithArm.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6160001: Last Updated: Sat Jul 29 14:51:02 2023
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6160001: Last Updated: Fri Aug 11 19:11:26 2023
 <BR><P>
 <H3>Maximum Stack Usage =         48 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -668,11 +668,11 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio::GPIO_PinInit(GPIO_PinConfigs*)
 </UL>
 
-<P><STRONG><a name="[7f]"></a>GPIO_PinConfigs::GPIO_PinConfigs()</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, gpio.o(.text._ZN15GPIO_PinConfigsC2Ev))
+<P><STRONG><a name="[7f]"></a>GPIO_PinConfigs::GPIO_PinConfigs()</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, gpio.o(.text._ZN15GPIO_PinConfigsC2Ev))
 <BR><BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[ab]"></a>GPIO_PinConfigs::GPIO_PinConfigs__sub_object()</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, gpio.o(.text._ZN15GPIO_PinConfigsC2Ev), UNUSED)
+<P><STRONG><a name="[ab]"></a>GPIO_PinConfigs::GPIO_PinConfigs__sub_object()</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, gpio.o(.text._ZN15GPIO_PinConfigsC2Ev), UNUSED)
 
 <P><STRONG><a name="[7d]"></a>rcc::RCC_gpioPortInit(RCC_GpioPortName_t)</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, rcc.o(.text._ZN3rcc16RCC_gpioPortInitE18RCC_GpioPortName_t))
 <BR><BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio::gpio(GPIO_PortName_t)
@@ -692,7 +692,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[80]"></a>gpio::GPIO_PinStateSet(GPIO_PinConfigs*, GPIO_PinState_t)</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, gpio.o(.text._ZN4gpio16GPIO_PinStateSetEP15GPIO_PinConfigs15GPIO_PinState_t))
+<P><STRONG><a name="[80]"></a>gpio::GPIO_PinStateSet(GPIO_PinConfigs*, GPIO_PinState_t)</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, gpio.o(.text._ZN4gpio16GPIO_PinStateSetEP15GPIO_PinConfigs15GPIO_PinState_t))
 <BR><BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -706,7 +706,7 @@ Global Symbols
 
 <P><STRONG><a name="[ad]"></a>gpio::gpio__sub_object(GPIO_PortName_t)</STRONG> (Thumb, 72 bytes, Stack size 16 bytes, gpio.o(.text._ZN4gpioC2E15GPIO_PortName_t), UNUSED)
 
-<P><STRONG><a name="[71]"></a>main</STRONG> (Thumb, 50 bytes, Stack size 24 bytes, main.o(.text.main))
+<P><STRONG><a name="[71]"></a>main</STRONG> (Thumb, 54 bytes, Stack size 24 bytes, main.o(.text.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = main &rArr; gpio::GPIO_PinInit(GPIO_PinConfigs*)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio::gpio(GPIO_PortName_t)

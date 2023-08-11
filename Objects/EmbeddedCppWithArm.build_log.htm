@@ -22,11 +22,34 @@ Dialog DLL:      TCM.DLL V1.53.0.0
  
 <h2>Project:</h2>
 H:\Youtube_EmbeddedCpp\Repositories\EmbeddedCpp\EmbeddedCppWithArm\EmbeddedCppWithArm.uvprojx
-Project File Date:  07/29/2023
+Project File Date:  08/11/2023
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'STMF446RE'
+assembling startup_stm32f446xx.s...
+compiling system_stm32f4xx.c...
+rcc.cpp(1): warning: In file included from...
+./rcc.h(37): warning: C++98 requires newline at end of file [-Wc++98-compat-pedantic]
+#endif
+      ^
+rcc.cpp(3): warning: use of old-style cast [-Wold-style-cast]
+RCC_TypeDef* RCC_MemoryMapBase = (RCC_TypeDef*) RCC_BASE;
+                                 ^              ~~~~~~~~
+rcc.cpp(3): warning: no previous extern declaration for non-static variable 'RCC_MemoryMapBase' [-Wmissing-variable-declarations]
+RCC_TypeDef* RCC_MemoryMapBase = (RCC_TypeDef*) RCC_BASE;
+             ^
+rcc.cpp(3): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+RCC_TypeDef* RCC_MemoryMapBase = (RCC_TypeDef*) RCC_BASE;
+^
+rcc.cpp(41): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                default:
+                ^
+rcc.cpp(49): warning: C++98 requires newline at end of file [-Wc++98-compat-pedantic]
+}
+ ^
+5 warnings generated.
+compiling rcc.cpp...
 main.cpp(1): warning: In file included from...
 ./gpio.h(112): warning: default member initializer for non-static data members is incompatible with C++98 [-Wc++98-compat]
                 GPIO_PinState_t  pinState                       =GPIO_PIN_STATE_LOW;
@@ -55,29 +78,6 @@ main.cpp(1): warning: In file included from...
                                ^
 8 warnings generated.
 compiling main.cpp...
-assembling startup_stm32f446xx.s...
-compiling system_stm32f4xx.c...
-rcc.cpp(1): warning: In file included from...
-./rcc.h(37): warning: C++98 requires newline at end of file [-Wc++98-compat-pedantic]
-#endif
-      ^
-rcc.cpp(3): warning: use of old-style cast [-Wold-style-cast]
-RCC_TypeDef* RCC_MemoryMapBase = (RCC_TypeDef*) RCC_BASE;
-                                 ^              ~~~~~~~~
-rcc.cpp(3): warning: no previous extern declaration for non-static variable 'RCC_MemoryMapBase' [-Wmissing-variable-declarations]
-RCC_TypeDef* RCC_MemoryMapBase = (RCC_TypeDef*) RCC_BASE;
-             ^
-rcc.cpp(3): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-RCC_TypeDef* RCC_MemoryMapBase = (RCC_TypeDef*) RCC_BASE;
-^
-rcc.cpp(41): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
-                default:
-                ^
-rcc.cpp(49): warning: C++98 requires newline at end of file [-Wc++98-compat-pedantic]
-}
- ^
-5 warnings generated.
-compiling rcc.cpp...
 gpio.cpp(1): warning: In file included from...
 ./gpio.h(112): warning: default member initializer for non-static data members is incompatible with C++98 [-Wc++98-compat]
                 GPIO_PinState_t  pinState                       =GPIO_PIN_STATE_LOW;
@@ -304,7 +304,7 @@ gpio.cpp(190): warning: C++98 requires newline at end of file [-Wc++98-compat-pe
 53 warnings generated.
 compiling gpio.cpp...
 linking...
-Program Size: Code=1024 RO-data=488 RW-data=28 ZI-data=1640  
+Program Size: Code=1032 RO-data=488 RW-data=28 ZI-data=1640  
 ".\Objects\EmbeddedCppWithArm.axf" - 0 Error(s), 66 Warning(s).
 
 <h2>Software Packages used:</h2>
