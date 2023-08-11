@@ -1,7 +1,7 @@
 #ifndef RCC_H
 #define RCC_H
 #include "stm32f446xx.h"
-
+#include <stdio.h>
 
 enum RCC_GpioPortName_t
 {
