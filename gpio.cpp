@@ -62,7 +62,7 @@ gpio::gpio(GPIO_PortName_t PortName)
 
 /*******************/
 
-GPIO_ErrorType_t gpio::GPIO_PinInit		(GPIO_PinConfigs* pinConfigs)
+ GPIO_ErrorType_t gpio::GPIO_PinInit		(GPIO_PinConfigs* pinConfigs)
 {
     GPIO_ErrorType_t errReturn = GPIO_DEFAULT_ERR;
 

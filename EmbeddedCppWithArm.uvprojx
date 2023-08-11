@@ -416,6 +416,31 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>HAL</GroupName>
+          <Files>
+            <File>
+              <FileName>led.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\led.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>led.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\led.h</FilePath>
+            </File>
+            <File>
+              <FileName>led_cfg.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\led_cfg.h</FilePath>
+            </File>
+            <File>
+              <FileName>led_cfg.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\led_cfg.cpp</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>::CMSIS</GroupName>
         </Group>
         <Group>

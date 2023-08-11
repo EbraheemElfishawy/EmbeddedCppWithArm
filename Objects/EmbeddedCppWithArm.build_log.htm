@@ -27,8 +27,6 @@ Project File Date:  08/11/2023
 <h2>Output:</h2>
 *** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'STMF446RE'
-assembling startup_stm32f446xx.s...
-compiling system_stm32f4xx.c...
 rcc.cpp(1): warning: In file included from...
 ./rcc.h(37): warning: C++98 requires newline at end of file [-Wc++98-compat-pedantic]
 #endif
@@ -50,7 +48,11 @@ rcc.cpp(49): warning: C++98 requires newline at end of file [-Wc++98-compat-peda
  ^
 5 warnings generated.
 compiling rcc.cpp...
-main.cpp(1): warning: In file included from...
+assembling startup_stm32f446xx.s...
+compiling system_stm32f4xx.c...
+led.cpp(1): warning: In file included from...
+./led.h(4): warning: In file included from...
+./led_cfg.h(4): warning: In file included from...
 ./gpio.h(112): warning: default member initializer for non-static data members is incompatible with C++98 [-Wc++98-compat]
                 GPIO_PinState_t  pinState                       =GPIO_PIN_STATE_LOW;
                                                                 ^
@@ -69,13 +71,108 @@ main.cpp(1): warning: In file included from...
 ./gpio.h(139): warning: C++98 requires newline at end of file [-Wc++98-compat-pedantic]
 #endif
       ^
-main.cpp(15): warning: C++98 requires newline at end of file [-Wc++98-compat-pedantic]
-}
- ^
-main.cpp(1): warning: In file included from...
+led.cpp(1): warning: In file included from...
+./led.h(4): warning: In file included from...
+./led_cfg.h(23): warning: C++98 requires newline at end of file [-Wc++98-compat-pedantic]
+#endif
+      ^
+led.cpp(3): warning: no previous extern declaration for non-static variable 'LED_AllLedPinConfigs' [-Wmissing-variable-declarations]
+GPIO_PinConfigs LED_AllLedPinConfigs[LEDS_COUNT];
+                ^
+led.cpp(3): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+GPIO_PinConfigs LED_AllLedPinConfigs[LEDS_COUNT];
+^
+led.cpp(3): warning: declaration requires a global constructor [-Wglobal-constructors]
+GPIO_PinConfigs LED_AllLedPinConfigs[LEDS_COUNT];
+                ^~~~~~~~~~~~~~~~~~~~
+led.cpp(1): warning: In file included from...
+./led.h(4): warning: In file included from...
+./led_cfg.h(4): warning: In file included from...
 ./gpio.h(130): warning: padding class 'gpio' with 3 bytes to align 'GPIO_PortReg' [-Wpadded]
                 GPIO_TypeDef * GPIO_PortReg;
                                ^
+led.cpp(5): warning: no previous extern declaration for non-static variable 'LED_AllLedPinInst' [-Wmissing-variable-declarations]
+gpio LED_AllLedPinInst[LEDS_COUNT]={gpio(GPIO_PORT_A),gpio(GPIO_PORT_B),gpio(GPIO_PORT_C),gpio(GPIO_PORT_A)};
+     ^
+led.cpp(5): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+gpio LED_AllLedPinInst[LEDS_COUNT]={gpio(GPIO_PORT_A),gpio(GPIO_PORT_B),gpio(GPIO_PORT_C),gpio(GPIO_PORT_A)};
+^
+led.cpp(5): warning: declaration requires a global constructor [-Wglobal-constructors]
+gpio LED_AllLedPinInst[LEDS_COUNT]={gpio(GPIO_PORT_A),gpio(GPIO_PORT_B),gpio(GPIO_PORT_C),gpio(GPIO_PORT_A)};
+     ^                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+led.cpp(11): warning: use of old-style cast [-Wold-style-cast]
+    LED_AllLedPinConfigs[_color].pinState  = (GPIO_PinState_t)_state;
+                                             ^                ~~~~~~
+led.cpp(13): warning: use of old-style cast [-Wold-style-cast]
+    LED_AllLedPinInst[_color].GPIO_PinStateSet(&LED_AllLedPinConfigs[_color],(GPIO_PinState_t)_state);
+                                                                             ^                ~~~~~~
+led.cpp(18): warning: use of old-style cast [-Wold-style-cast]
+    LED_AllLedPinInst[color].GPIO_PinStateSet(&LED_AllLedPinConfigs[color],(GPIO_PinState_t)_state);
+                                                                           ^                ~~~~~~
+led.cpp(22): warning: use of old-style cast [-Wold-style-cast]
+    return (LedState_Type)LED_AllLedPinInst[color].GPIO_PinStateGet(&LED_AllLedPinConfigs[color]);
+           ^              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+led.cpp(1): warning: In file included from...
+./led.h(30): warning: private field 'state' is not used [-Wunused-private-field]
+                LedState_Type state;            /* State of LED*/
+                              ^
+17 warnings generated.
+compiling led.cpp...
+led_cfg.cpp(1): warning: In file included from...
+./led_cfg.h(4): warning: In file included from...
+./gpio.h(112): warning: default member initializer for non-static data members is incompatible with C++98 [-Wc++98-compat]
+                GPIO_PinState_t  pinState                       =GPIO_PIN_STATE_LOW;
+                                                                ^
+./gpio.h(113): warning: default member initializer for non-static data members is incompatible with C++98 [-Wc++98-compat]
+                GPIO_PinMode_t   pinMode                        =GPIO_PinMode_OUTPUT;
+                                                                ^
+./gpio.h(114): warning: default member initializer for non-static data members is incompatible with C++98 [-Wc++98-compat]
+                GPIO_PinOutputSpeed_t pinOutputSpeed=GPIO_PinOutputSpeed_LOW;
+                                                    ^
+./gpio.h(115): warning: default member initializer for non-static data members is incompatible with C++98 [-Wc++98-compat]
+                GPIO_PinOutputType_t  pinOutputType     =GPIO_PinOutputType_PUSH_PULL;
+                                                        ^
+./gpio.h(116): warning: default member initializer for non-static data members is incompatible with C++98 [-Wc++98-compat]
+                GPIO_PinPullUpDown_t  pinPullUpDown     =GPIO_PinPullUpDown_NOPULL;
+                                                        ^
+./gpio.h(139): warning: C++98 requires newline at end of file [-Wc++98-compat-pedantic]
+#endif
+      ^
+led_cfg.cpp(1): warning: In file included from...
+./led_cfg.h(23): warning: C++98 requires newline at end of file [-Wc++98-compat-pedantic]
+#endif
+      ^
+7 warnings generated.
+compiling led_cfg.cpp...
+main.cpp(1): warning: In file included from...
+./led.h(4): warning: In file included from...
+./led_cfg.h(4): warning: In file included from...
+./gpio.h(112): warning: default member initializer for non-static data members is incompatible with C++98 [-Wc++98-compat]
+                GPIO_PinState_t  pinState                       =GPIO_PIN_STATE_LOW;
+                                                                ^
+./gpio.h(113): warning: default member initializer for non-static data members is incompatible with C++98 [-Wc++98-compat]
+                GPIO_PinMode_t   pinMode                        =GPIO_PinMode_OUTPUT;
+                                                                ^
+./gpio.h(114): warning: default member initializer for non-static data members is incompatible with C++98 [-Wc++98-compat]
+                GPIO_PinOutputSpeed_t pinOutputSpeed=GPIO_PinOutputSpeed_LOW;
+                                                    ^
+./gpio.h(115): warning: default member initializer for non-static data members is incompatible with C++98 [-Wc++98-compat]
+                GPIO_PinOutputType_t  pinOutputType     =GPIO_PinOutputType_PUSH_PULL;
+                                                        ^
+./gpio.h(116): warning: default member initializer for non-static data members is incompatible with C++98 [-Wc++98-compat]
+                GPIO_PinPullUpDown_t  pinPullUpDown     =GPIO_PinPullUpDown_NOPULL;
+                                                        ^
+./gpio.h(139): warning: C++98 requires newline at end of file [-Wc++98-compat-pedantic]
+#endif
+      ^
+main.cpp(1): warning: In file included from...
+./led.h(4): warning: In file included from...
+./led_cfg.h(23): warning: C++98 requires newline at end of file [-Wc++98-compat-pedantic]
+#endif
+      ^
+main.cpp(9): warning: C++98 requires newline at end of file [-Wc++98-compat-pedantic]
+}
+ ^
 8 warnings generated.
 compiling main.cpp...
 gpio.cpp(1): warning: In file included from...
@@ -304,8 +401,8 @@ gpio.cpp(190): warning: C++98 requires newline at end of file [-Wc++98-compat-pe
 53 warnings generated.
 compiling gpio.cpp...
 linking...
-Program Size: Code=1032 RO-data=488 RW-data=28 ZI-data=1640  
-".\Objects\EmbeddedCppWithArm.axf" - 0 Error(s), 66 Warning(s).
+Program Size: Code=1160 RO-data=492 RW-data=28 ZI-data=1712  
+".\Objects\EmbeddedCppWithArm.axf" - 0 Error(s), 90 Warning(s).
 
 <h2>Software Packages used:</h2>
 
