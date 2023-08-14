@@ -3,11 +3,11 @@
 <title>Static Call Graph - [.\Objects\EmbeddedCppWithArm.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\EmbeddedCppWithArm.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6160001: Last Updated: Fri Aug 11 19:28:11 2023
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6160001: Last Updated: Mon Aug 14 20:29:42 2023
 <BR><P>
-<H3>Maximum Stack Usage =         56 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =         40 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
-__rt_entry_main &rArr; main &rArr; led::led(LedColor_Type, LedState_Type) &rArr; gpio::GPIO_PinInit(GPIO_PinConfigs*)
+__rt_entry_main &rArr; main &rArr; dimmerLed::dimmerLed__sub_object(ledBrightnessLevel_Type, LedColor_Type, LedState_Type) &rArr; led::led__sub_object(LedColor_Type, LedState_Type)
 <P>
 <H3>
 Functions with no stack information
@@ -152,9 +152,9 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry
 </UL>
 
-<P><STRONG><a name="[85]"></a>__scatterload_rt2_thumb_only</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
+<P><STRONG><a name="[88]"></a>__scatterload_rt2_thumb_only</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
 
-<P><STRONG><a name="[86]"></a>__scatterload_null</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
+<P><STRONG><a name="[89]"></a>__scatterload_null</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
 
 <P><STRONG><a name="[69]"></a>__scatterload_copy</STRONG> (Thumb, 26 bytes, Stack size unknown bytes, __scatter_copy.o(!!handler_copy), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_copy
@@ -162,7 +162,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_copy
 </UL>
 
-<P><STRONG><a name="[87]"></a>__scatterload_zeroinit</STRONG> (Thumb, 28 bytes, Stack size unknown bytes, __scatter_zi.o(!!handler_zi), UNUSED)
+<P><STRONG><a name="[8a]"></a>__scatterload_zeroinit</STRONG> (Thumb, 28 bytes, Stack size unknown bytes, __scatter_zi.o(!!handler_zi), UNUSED)
 
 <P><STRONG><a name="[70]"></a>__rt_lib_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit.o(.ARM.Collect$$libinit$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_li
@@ -172,13 +172,13 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_init
 </UL>
 
-<P><STRONG><a name="[88]"></a>__rt_lib_init_alloca_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002E))
+<P><STRONG><a name="[8b]"></a>__rt_lib_init_alloca_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002E))
 
-<P><STRONG><a name="[89]"></a>__rt_lib_init_argv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002C))
+<P><STRONG><a name="[8c]"></a>__rt_lib_init_argv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002C))
 
-<P><STRONG><a name="[8a]"></a>__rt_lib_init_atexit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001B))
+<P><STRONG><a name="[8d]"></a>__rt_lib_init_atexit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001B))
 
-<P><STRONG><a name="[8b]"></a>__rt_lib_init_clock_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000021))
+<P><STRONG><a name="[8e]"></a>__rt_lib_init_clock_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000021))
 
 <P><STRONG><a name="[6c]"></a>__rt_lib_init_cpp_2</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000031))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16 + Unknown Stack Size
@@ -187,62 +187,62 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cpp_initialize__aeabi_
 </UL>
 
-<P><STRONG><a name="[8c]"></a>__rt_lib_init_exceptions_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000030))
+<P><STRONG><a name="[8f]"></a>__rt_lib_init_exceptions_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000030))
 
-<P><STRONG><a name="[8d]"></a>__rt_lib_init_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001F))
+<P><STRONG><a name="[90]"></a>__rt_lib_init_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001F))
 
-<P><STRONG><a name="[8e]"></a>__rt_lib_init_getenv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000023))
+<P><STRONG><a name="[91]"></a>__rt_lib_init_getenv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000023))
 
-<P><STRONG><a name="[8f]"></a>__rt_lib_init_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000A))
+<P><STRONG><a name="[92]"></a>__rt_lib_init_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000A))
 
-<P><STRONG><a name="[90]"></a>__rt_lib_init_lc_collate_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000011))
+<P><STRONG><a name="[93]"></a>__rt_lib_init_lc_collate_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000011))
 
-<P><STRONG><a name="[91]"></a>__rt_lib_init_lc_ctype_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000013))
+<P><STRONG><a name="[94]"></a>__rt_lib_init_lc_ctype_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000013))
 
-<P><STRONG><a name="[92]"></a>__rt_lib_init_lc_monetary_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000015))
+<P><STRONG><a name="[95]"></a>__rt_lib_init_lc_monetary_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000015))
 
-<P><STRONG><a name="[93]"></a>__rt_lib_init_lc_numeric_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000017))
+<P><STRONG><a name="[96]"></a>__rt_lib_init_lc_numeric_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000017))
 
-<P><STRONG><a name="[94]"></a>__rt_lib_init_lc_time_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000019))
+<P><STRONG><a name="[97]"></a>__rt_lib_init_lc_time_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000019))
 
-<P><STRONG><a name="[95]"></a>__rt_lib_init_preinit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000004))
+<P><STRONG><a name="[98]"></a>__rt_lib_init_preinit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000004))
 
-<P><STRONG><a name="[96]"></a>__rt_lib_init_rand_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000E))
+<P><STRONG><a name="[99]"></a>__rt_lib_init_rand_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000E))
 
-<P><STRONG><a name="[97]"></a>__rt_lib_init_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001D))
+<P><STRONG><a name="[9a]"></a>__rt_lib_init_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001D))
 
-<P><STRONG><a name="[98]"></a>__rt_lib_init_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000025))
+<P><STRONG><a name="[9b]"></a>__rt_lib_init_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000025))
 
-<P><STRONG><a name="[99]"></a>__rt_lib_init_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000C))
+<P><STRONG><a name="[9c]"></a>__rt_lib_init_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000C))
 
-<P><STRONG><a name="[9a]"></a>__rt_lib_init_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000032))
+<P><STRONG><a name="[9d]"></a>__rt_lib_init_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000032))
 
-<P><STRONG><a name="[9b]"></a>__rt_lib_init_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000033))
+<P><STRONG><a name="[9e]"></a>__rt_lib_init_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000033))
 
 <P><STRONG><a name="[75]"></a>__rt_lib_shutdown</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown.o(.ARM.Collect$$libshutdown$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_ls
 </UL>
 
-<P><STRONG><a name="[9c]"></a>__rt_lib_shutdown_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000002))
+<P><STRONG><a name="[9f]"></a>__rt_lib_shutdown_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000002))
 
-<P><STRONG><a name="[9d]"></a>__rt_lib_shutdown_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000007))
+<P><STRONG><a name="[a0]"></a>__rt_lib_shutdown_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000007))
 
-<P><STRONG><a name="[9e]"></a>__rt_lib_shutdown_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F))
+<P><STRONG><a name="[a1]"></a>__rt_lib_shutdown_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F))
 
-<P><STRONG><a name="[9f]"></a>__rt_lib_shutdown_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000010))
+<P><STRONG><a name="[a2]"></a>__rt_lib_shutdown_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000010))
 
-<P><STRONG><a name="[a0]"></a>__rt_lib_shutdown_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A))
+<P><STRONG><a name="[a3]"></a>__rt_lib_shutdown_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A))
 
-<P><STRONG><a name="[a1]"></a>__rt_lib_shutdown_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000004))
+<P><STRONG><a name="[a4]"></a>__rt_lib_shutdown_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000004))
 
-<P><STRONG><a name="[a2]"></a>__rt_lib_shutdown_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C))
+<P><STRONG><a name="[a5]"></a>__rt_lib_shutdown_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C))
 
 <P><STRONG><a name="[67]"></a>__rt_entry</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry.o(.ARM.Collect$$rtentry$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_rt2
 <LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
 </UL>
 
-<P><STRONG><a name="[a3]"></a>__rt_entry_presh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000002))
+<P><STRONG><a name="[a6]"></a>__rt_entry_presh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000002))
 
 <P><STRONG><a name="[6d]"></a>__rt_entry_sh</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry4.o(.ARM.Collect$$rtentry$$00000004))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
@@ -255,17 +255,17 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init
 </UL>
 
-<P><STRONG><a name="[a4]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
+<P><STRONG><a name="[a7]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
 
 <P><STRONG><a name="[71]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
-<BR><BR>[Stack]<UL><LI>Max Depth = 56 + Unknown Stack Size
-<LI>Call Chain = __rt_entry_main &rArr; main &rArr; led::led(LedColor_Type, LedState_Type) &rArr; gpio::GPIO_PinInit(GPIO_PinConfigs*)
+<BR><BR>[Stack]<UL><LI>Max Depth = 40 + Unknown Stack Size
+<LI>Call Chain = __rt_entry_main &rArr; main &rArr; dimmerLed::dimmerLed__sub_object(ledBrightnessLevel_Type, LedColor_Type, LedState_Type) &rArr; led::led__sub_object(LedColor_Type, LedState_Type)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
 <LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[a5]"></a>__rt_entry_postli_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000C))
+<P><STRONG><a name="[a8]"></a>__rt_entry_postli_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000C))
 
 <P><STRONG><a name="[79]"></a>__rt_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit.o(.ARM.Collect$$rtexit$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
@@ -275,7 +275,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_shutdown
 </UL>
 
-<P><STRONG><a name="[a6]"></a>__rt_exit_prels_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000002))
+<P><STRONG><a name="[a9]"></a>__rt_exit_prels_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000002))
 
 <P><STRONG><a name="[76]"></a>__rt_exit_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_exit
@@ -613,11 +613,11 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
 </UL>
 
-<P><STRONG><a name="[a7]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[aa]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
-<P><STRONG><a name="[a8]"></a>__rt_heap_escrow$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[ab]"></a>__rt_heap_escrow$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
-<P><STRONG><a name="[a9]"></a>__rt_heap_expand$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[ac]"></a>__rt_heap_expand$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
 <P><STRONG><a name="[65]"></a>__cpp_initialize__aeabi_</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, init_aeabi.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __cpp_initialize__aeabi_
@@ -644,19 +644,19 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[aa]"></a>__user_libspace</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
+<P><STRONG><a name="[ad]"></a>__user_libspace</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
 
 <P><STRONG><a name="[78]"></a>__user_perproc_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
 </UL>
 
-<P><STRONG><a name="[ab]"></a>__user_perthread_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
+<P><STRONG><a name="[ae]"></a>__user_perthread_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
 
-<P><STRONG><a name="[ac]"></a>__I$use$semihosting</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+<P><STRONG><a name="[af]"></a>__I$use$semihosting</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[ad]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+<P><STRONG><a name="[b0]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[ae]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, indicate_semi.o(.text), UNUSED)
+<P><STRONG><a name="[b1]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, indicate_semi.o(.text), UNUSED)
 
 <P><STRONG><a name="[77]"></a>_sys_exit</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, sys_exit.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_exit
@@ -665,63 +665,79 @@ Global Symbols
 <P><STRONG><a name="[60]"></a>SystemInit</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, system_stm32f4xx.o(.text.SystemInit))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f446xx.o(.text)
 </UL>
-<P><STRONG><a name="[80]"></a>GPIO_PinConfigs::GPIO_PinConfigsIsOk()</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, gpio.o(.text._ZN15GPIO_PinConfigs19GPIO_PinConfigsIsOkEv))
-<BR><BR>[Called By]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio::GPIO_PinInit(GPIO_PinConfigs*)
+<P><STRONG><a name="[81]"></a>GPIO_PinConfigs::GPIO_PinConfigsIsOk()</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, gpio.o(.text._ZN15GPIO_PinConfigs19GPIO_PinConfigsIsOkEv), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio::GPIO_PinInit(GPIO_PinConfigs*)
 </UL>
 
-<P><STRONG><a name="[84]"></a>GPIO_PinConfigs::GPIO_PinConfigs()</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, gpio.o(.text._ZN15GPIO_PinConfigsC2Ev))
+<P><STRONG><a name="[87]"></a>GPIO_PinConfigs::GPIO_PinConfigs()</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, gpio.o(.text._ZN15GPIO_PinConfigsC2Ev))
 <BR><BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init
 </UL>
 
-<P><STRONG><a name="[af]"></a>GPIO_PinConfigs::GPIO_PinConfigs__sub_object()</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, gpio.o(.text._ZN15GPIO_PinConfigsC2Ev), UNUSED)
+<P><STRONG><a name="[b2]"></a>GPIO_PinConfigs::GPIO_PinConfigs__sub_object()</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, gpio.o(.text._ZN15GPIO_PinConfigsC2Ev), UNUSED)
 
-<P><STRONG><a name="[7d]"></a>led::led(LedColor_Type, LedState_Type)</STRONG> (Thumb, 74 bytes, Stack size 24 bytes, led.o(.text._ZN3ledC2E13LedColor_Type13LedState_Type))
-<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = led::led(LedColor_Type, LedState_Type) &rArr; gpio::GPIO_PinInit(GPIO_PinConfigs*)
+<P><STRONG><a name="[7d]"></a>led::setState(LedState_Type)</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, led.o(.text._ZN3led8setStateE13LedState_Type))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = led::setState(LedState_Type)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio::GPIO_PinStateSet(GPIO_PinConfigs*, GPIO_PinState_t)
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio::GPIO_PinInit(GPIO_PinConfigs*)
+<BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio::GPIO_PinStateSet(GPIO_PinConfigs*, GPIO_PinState_t)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[b0]"></a>led::led__sub_object(LedColor_Type, LedState_Type)</STRONG> (Thumb, 74 bytes, Stack size 24 bytes, led.o(.text._ZN3ledC2E13LedColor_Type13LedState_Type), UNUSED)
-
-<P><STRONG><a name="[82]"></a>rcc::RCC_gpioPortInit(RCC_GpioPortName_t)</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, rcc.o(.text._ZN3rcc16RCC_gpioPortInitE18RCC_GpioPortName_t))
-<BR><BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio::gpio(GPIO_PortName_t)
+<P><STRONG><a name="[7f]"></a>led::led(LedColor_Type, LedState_Type)</STRONG> (Thumb, 62 bytes, Stack size 24 bytes, led.o(.text._ZN3ledC2E13LedColor_Type13LedState_Type), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio::GPIO_PinStateSet(GPIO_PinConfigs*, GPIO_PinState_t)
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio::GPIO_PinInit(GPIO_PinConfigs*)
 </UL>
 
-<P><STRONG><a name="[83]"></a>rcc::rcc()</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, rcc.o(.text._ZN3rccC2Ev))
+<P><STRONG><a name="[85]"></a>led::led__sub_object(LedColor_Type, LedState_Type)</STRONG> (Thumb, 62 bytes, Stack size 24 bytes, led.o(.text._ZN3ledC2E13LedColor_Type13LedState_Type))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = led::led__sub_object(LedColor_Type, LedState_Type)
+</UL>
+<BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dimmerLed::dimmerLed__sub_object(ledBrightnessLevel_Type, LedColor_Type, LedState_Type)
+</UL>
+
+<P><STRONG><a name="[83]"></a>rcc::RCC_gpioPortInit(RCC_GpioPortName_t)</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, rcc.o(.text._ZN3rcc16RCC_gpioPortInitE18RCC_GpioPortName_t))
+<BR><BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio::gpio(GPIO_PortName_t)
+</UL>
+
+<P><STRONG><a name="[86]"></a>rcc::rcc()</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, rcc.o(.text._ZN3rccC2Ev))
 <BR><BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init
 </UL>
 
-<P><STRONG><a name="[b1]"></a>rcc::rcc__sub_object()</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, rcc.o(.text._ZN3rccC2Ev), UNUSED)
+<P><STRONG><a name="[b3]"></a>rcc::rcc__sub_object()</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, rcc.o(.text._ZN3rccC2Ev), UNUSED)
 
-<P><STRONG><a name="[7e]"></a>gpio::GPIO_PinInit(GPIO_PinConfigs*)</STRONG> (Thumb, 276 bytes, Stack size 24 bytes, gpio.o(.text._ZN4gpio12GPIO_PinInitEP15GPIO_PinConfigs))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = gpio::GPIO_PinInit(GPIO_PinConfigs*)
+<P><STRONG><a name="[80]"></a>gpio::GPIO_PinInit(GPIO_PinConfigs*)</STRONG> (Thumb, 276 bytes, Stack size 24 bytes, gpio.o(.text._ZN4gpio12GPIO_PinInitEP15GPIO_PinConfigs), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinConfigs::GPIO_PinConfigsIsOk()
 </UL>
-<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinConfigs::GPIO_PinConfigsIsOk()
-</UL>
-<BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led::led(LedColor_Type, LedState_Type)
+<BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led::led(LedColor_Type, LedState_Type)
 </UL>
 
-<P><STRONG><a name="[7f]"></a>gpio::GPIO_PinStateSet(GPIO_PinConfigs*, GPIO_PinState_t)</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, gpio.o(.text._ZN4gpio16GPIO_PinStateSetEP15GPIO_PinConfigs15GPIO_PinState_t))
-<BR><BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led::led(LedColor_Type, LedState_Type)
+<P><STRONG><a name="[7e]"></a>gpio::GPIO_PinStateSet(GPIO_PinConfigs*, GPIO_PinState_t)</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, gpio.o(.text._ZN4gpio16GPIO_PinStateSetEP15GPIO_PinConfigs15GPIO_PinState_t))
+<BR><BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led::led(LedColor_Type, LedState_Type)
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led::setState(LedState_Type)
 </UL>
 
-<P><STRONG><a name="[81]"></a>gpio::gpio(GPIO_PortName_t)</STRONG> (Thumb, 72 bytes, Stack size 16 bytes, gpio.o(.text._ZN4gpioC2E15GPIO_PortName_t))
+<P><STRONG><a name="[82]"></a>gpio::gpio(GPIO_PortName_t)</STRONG> (Thumb, 72 bytes, Stack size 16 bytes, gpio.o(.text._ZN4gpioC2E15GPIO_PortName_t))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = gpio::gpio(GPIO_PortName_t)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rcc::RCC_gpioPortInit(RCC_GpioPortName_t)
+<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rcc::RCC_gpioPortInit(RCC_GpioPortName_t)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.1
 </UL>
 
-<P><STRONG><a name="[b2]"></a>gpio::gpio__sub_object(GPIO_PortName_t)</STRONG> (Thumb, 72 bytes, Stack size 16 bytes, gpio.o(.text._ZN4gpioC2E15GPIO_PortName_t), UNUSED)
+<P><STRONG><a name="[b4]"></a>gpio::gpio__sub_object(GPIO_PortName_t)</STRONG> (Thumb, 72 bytes, Stack size 16 bytes, gpio.o(.text._ZN4gpioC2E15GPIO_PortName_t), UNUSED)
 
-<P><STRONG><a name="[72]"></a>main</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, main.o(.text.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = main &rArr; led::led(LedColor_Type, LedState_Type) &rArr; gpio::GPIO_PinInit(GPIO_PinConfigs*)
+<P><STRONG><a name="[84]"></a>dimmerLed::dimmerLed__sub_object(ledBrightnessLevel_Type, LedColor_Type, LedState_Type)</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, main.o(.text._ZN9dimmerLedC2E23ledBrightnessLevel_Type13LedColor_Type13LedState_Type))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = dimmerLed::dimmerLed__sub_object(ledBrightnessLevel_Type, LedColor_Type, LedState_Type) &rArr; led::led__sub_object(LedColor_Type, LedState_Type)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led::led(LedColor_Type, LedState_Type)
+<BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led::led__sub_object(LedColor_Type, LedState_Type)
+</UL>
+<BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[72]"></a>main</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, main.o(.text.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = main &rArr; dimmerLed::dimmerLed__sub_object(ledBrightnessLevel_Type, LedColor_Type, LedState_Type) &rArr; led::led__sub_object(LedColor_Type, LedState_Type)
+</UL>
+<BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dimmerLed::dimmerLed__sub_object(ledBrightnessLevel_Type, LedColor_Type, LedState_Type)
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led::setState(LedState_Type)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
@@ -730,9 +746,9 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init_fp_1
 </UL>
 
-<P><STRONG><a name="[b3]"></a>__fplib_config_fpu_vfp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, fpinit.o(x$fpl$fpinit), UNUSED)
+<P><STRONG><a name="[b5]"></a>__fplib_config_fpu_vfp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, fpinit.o(x$fpl$fpinit), UNUSED)
 
-<P><STRONG><a name="[b4]"></a>__fplib_config_pureend_doubles</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, fpinit.o(x$fpl$fpinit), UNUSED)
+<P><STRONG><a name="[b6]"></a>__fplib_config_pureend_doubles</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, fpinit.o(x$fpl$fpinit), UNUSED)
 <P>
 <H3>
 Local Symbols
@@ -747,7 +763,7 @@ Local Symbols
 <P><STRONG><a name="[7a]"></a>__cxx_global_var_init</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, gpio.o(.text.__cxx_global_var_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __cxx_global_var_init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rcc::rcc()
+<BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rcc::rcc()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GLOBAL__sub_I_gpio.cpp
 </UL>
@@ -760,18 +776,18 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> led.o(.init_array)
 </UL>
-<P><STRONG><a name="[7b]"></a>__cxx_global_var_init</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, led.o(.text.__cxx_global_var_init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __cxx_global_var_init
+<P><STRONG><a name="[7b]"></a>__cxx_global_var_init</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, led.o(.text.__cxx_global_var_init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __cxx_global_var_init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinConfigs::GPIO_PinConfigs()
+<BR>[Calls]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinConfigs::GPIO_PinConfigs()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GLOBAL__sub_I_led.cpp
 </UL>
 
-<P><STRONG><a name="[7c]"></a>__cxx_global_var_init.1</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, led.o(.text.__cxx_global_var_init.1))
+<P><STRONG><a name="[7c]"></a>__cxx_global_var_init.1</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, led.o(.text.__cxx_global_var_init.1))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __cxx_global_var_init.1 &rArr; gpio::gpio(GPIO_PortName_t)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio::gpio(GPIO_PortName_t)
+<BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio::gpio(GPIO_PortName_t)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GLOBAL__sub_I_led.cpp
 </UL>

@@ -31,7 +31,7 @@ enum LedState_Type
 	public:
 		led(LedColor_Type _color, LedState_Type _state);
 		void setState(LedState_Type _state);
-		LedState_Type getState(void)const;	
+		LedState_Type getState(void);	
 };
 
 #endif

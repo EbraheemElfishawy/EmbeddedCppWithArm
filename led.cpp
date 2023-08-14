@@ -5,9 +5,9 @@
 
 #if SINGLE_LED
 
-GPIO_PinConfigs builtInLedPinConfigs;
+static GPIO_PinConfigs builtInLedPinConfigs;
 /* Using bunch of function calls as elements of array to initialize the Array of objects with parameterized constructors*/
-gpio builtInLedPinInst(GPIO_PORT_A);
+static gpio builtInLedPinInst(GPIO_PORT_A);
 
 led::led(LedColor_Type _color, LedState_Type _state) :color(_color), state(_state)
 {
@@ -21,7 +21,7 @@ void led::setState(LedState_Type _state)
 {
     builtInLedPinInst.GPIO_PinStateSet(&builtInLedPinConfigs,(GPIO_PinState_t)_state);
 }
-LedState_Type led::getState(void)const
+LedState_Type led::getState(void)
 {
     return (LedState_Type)builtInLedPinInst.GPIO_PinStateGet(&builtInLedPinConfigs);
 }
@@ -54,7 +54,7 @@ void led::setState(LedState_Type _state)
 {
     LED_AllLedPinInst[color].GPIO_PinStateSet(&LED_AllLedPinConfigs[color],(GPIO_PinState_t)_state);
 }
-LedState_Type led::getState(void)const
+LedState_Type led::getState(void)
 {
     return (LedState_Type)LED_AllLedPinInst[color].GPIO_PinStateGet(&LED_AllLedPinConfigs[color]);
 }

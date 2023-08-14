@@ -438,6 +438,16 @@
               <FileType>8</FileType>
               <FilePath>.\led_cfg.cpp</FilePath>
             </File>
+            <File>
+              <FileName>dimmerLed.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\dimmerLed.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>dimmerLed.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\dimmerLed.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
